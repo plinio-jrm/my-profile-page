@@ -1,11 +1,25 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { Grid } from '@mui/material';
+import { NextPage } from 'next'
+import { Page } from '../components/Page';
+import MainInfo from './mainInfo';
 
-export default function Home() {
+
+
+const HomePage: NextPage = () => {
   return (
-    <div className={styles.container}>
-      test
-    </div>
-  )
+    <Page>
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          md={4}
+          sx={{ border:'solid 1px black' }}
+        >
+          <MainInfo></MainInfo>
+        </Grid>
+      </Grid>
+    </Page>
+  );
 }
+
+export default HomePage;
