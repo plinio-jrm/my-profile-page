@@ -1,10 +1,14 @@
 import { Avatar, SvgIcon, Tooltip } from "@mui/material"
 import theme from "../utils/theme";
 
-export interface NetworkLink {
-   name: string;
+export interface SvgProps {
    viewbox: string;
    path: string;
+}
+
+export interface NetworkLink {
+   name: string;
+   svg: SvgProps;
 }
 
 export type AvatarLinkProps = NetworkLink;
@@ -23,7 +27,7 @@ export const AvatarLink = (props: AvatarLinkProps) => {
                width: getAvatarLinkSize(),
                height: getAvatarLinkSize()
             }}>
-            <SvgIcon viewBox={props.viewbox}><path d={props.path} /></SvgIcon>
+            <SvgIcon viewBox={props.svg.viewbox}><path d={props.svg.path} /></SvgIcon>
          </Avatar>
       </Tooltip>
    );
