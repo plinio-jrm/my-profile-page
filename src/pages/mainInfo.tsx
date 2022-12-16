@@ -1,4 +1,4 @@
-import { Grid, Avatar, Typography, Chip, Stack, SvgIcon, Tooltip } from "@mui/material";
+import { Grid, Avatar, Typography, Chip, Stack, Divider } from "@mui/material";
 import { NextPage } from "next";
 import { AvatarLink, NetworkLink } from "../components/AvatarLink";
 import theme from "../utils/theme";
@@ -24,7 +24,7 @@ const MainInfo: NextPage = () => {
    function getAvatarLinks() {
       return (
          socialNetworks.map((network: NetworkLink) => (
-            <AvatarLink name={network.name} svg={network.svg} />
+            <AvatarLink key={network.name} name={network.name} svg={network.svg} />
          ))
       );
    }
@@ -64,7 +64,8 @@ const MainInfo: NextPage = () => {
             avatar={<Avatar src="icons\Autism.png" />}
             sx={{ mt: theme.spacing(1) }}
          />
-         <Stack direction="row" spacing={theme.spacing(1.5)} pt={2}>
+         <Divider variant="middle" light sx={{pt: theme.spacing(5)}}>Links</Divider>
+         <Stack direction="row" spacing={theme.spacing(3)} pt={2}>
             {getAvatarLinks()}
          </Stack>
       </Grid>

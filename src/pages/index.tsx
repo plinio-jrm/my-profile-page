@@ -2,6 +2,7 @@ import { Grid, Divider } from '@mui/material';
 import { NextPage } from 'next'
 import { Page } from '../components/Page';
 import MainInfo from './mainInfo';
+import NavigationInfo from './navigationInfo';
 
 
 
@@ -12,17 +13,17 @@ const HomePage: NextPage = () => {
         <Grid
           item
           xs={12}
-          md={4}
+          lg={4}
         >
           <MainInfo></MainInfo>
+          <Divider orientation="vertical" flexItem variant="fullWidth" />
         </Grid>
-        <Divider orientation="vertical" flexItem variant="fullWidth" />
         <Grid
           item
           xs={12}
-          md={8}
+          lg={8}
         >
-          testiah doiahsodiash oidah siodh asid iashdiohsdaiodh i
+          <NavigationInfo></NavigationInfo>
         </Grid>
       </Grid>
     </Page>

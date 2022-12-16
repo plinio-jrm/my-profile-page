@@ -1,3 +1,4 @@
+import { Scale } from "@mui/icons-material";
 import { Avatar, SvgIcon, Tooltip } from "@mui/material"
 import theme from "../utils/theme";
 
@@ -25,7 +26,8 @@ export const AvatarLink = (props: AvatarLinkProps) => {
             sx={{
                bgcolor: '#fff',
                width: getAvatarLinkSize(),
-               height: getAvatarLinkSize()
+               height: getAvatarLinkSize(),
+               transform: 'Scale(1.5)'
             }}>
             <SvgIcon viewBox={props.svg.viewbox}><path d={props.svg.path} /></SvgIcon>
          </Avatar>
