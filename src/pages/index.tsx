@@ -4,8 +4,6 @@ import { Page } from '../components/Page';
 import MainInfo from './mainInfo';
 import NavigationInfo from './navigationInfo';
 
-
-
 const HomePage: NextPage = () => {
   return (
     <Page>

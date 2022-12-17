@@ -62,7 +62,7 @@ const MainInfo: NextPage = () => {
             color="default"
             label="Autista (CIPTEA: 5259)"
             avatar={<Avatar src="icons\Autism.png" />}
-            sx={{ mt: theme.spacing(1) }}
+            sx={{ mt: theme.spacing(1), boxShadow: 5 }}
          />
          <Divider variant="middle" light sx={{pt: theme.spacing(5)}}>Links</Divider>
          <Stack direction="row" spacing={theme.spacing(3)} pt={2}>
